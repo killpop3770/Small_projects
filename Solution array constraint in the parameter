@@ -1,1 +1,22 @@
+#include <iostream>
 
+template <size_t N1, size_t N2>
+void foo( int (&arr1)[N1], int (&arr2)[N2] )
+{
+    int size1 = N1;
+    int size2 = N2;
+    std::cout << size1<<' ';
+    std::cout << size2;
+};
+
+int main()
+{
+    //Example
+	int mas1[10] = {6,12,2,7,42,6,123,123322,55,61};
+	int mas2[5] = {6,123,1222,55,61};
+
+	foo(mas1, mas2);
+
+
+	return 0;
+}
